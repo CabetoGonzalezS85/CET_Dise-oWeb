@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ESER - Contáctanos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>ESER</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="services.html">SERVICIOS</a></li>
+        <li><a href="contact.html">CONTACTO</a></li>
+        <li><a href="portfolio.html">PORTAFOLIO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>📬 Contáctanos</h2>
+      <p>¿Tienes preguntas o deseas una cotización? Completa el siguiente formulario y uno de nuestros asesores te contactará lo antes posible.</p>
+    </section>
+
+    <section>
+      <form id="form-contacto" action="#" method="post" novalidate>
+        <fieldset>
+          <legend>📝 Información Personal</legend>
+
+          <label for="nombre">👤 Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required
+            pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" title="Solo se permiten letras y espacios"/>
+
+          <label for="correo">📧 Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" required/>
+
+          <label for="telefono">📱 Teléfono de contacto:</label>
+          <input type="tel" id="telefono" name="telefono" required
+            pattern="[0-9]{7,15}" inputmode="numeric" title="Solo números (7 a 15 dígitos)"/>
+
+          <label for="mensaje">📝 Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+          <button type="submit">Enviar mensaje</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section>
+      <h3>📞 También puedes contactarnos directamente:</h3>
+      <p>📧 <a href="mailto:info@eser.com.co">info@eser.com.co</a></p>
+      <p>📱 +57 310 456 7890</p>
+      <p>📍 Bogotá, Colombia</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>
+      <div>
+        <h3>Conecta con nosotros</h3>
+        <a href="#">🔵 Facebook</a>
+        <a href="#">🐦 Twitter</a>
+        <a href="#">🔗 LinkedIn</a>
+        <a href="#">📸 Instagram</a>
+      </div>
+
+      <div>
+        <p>
+          📧 info@eser.com.co<br>
+          📧 comercial@eser.com.co<br>
+          📧 soporte@eser.com.co<br>
+          📧 proyectos@eser.com.co
+        </p>
+        <p>📱 +57 310 456 7890</p>
+        <p>📍 Bogotá, Colombia</p>
+        <p>🌐 www.eser.com.co</p>
+      </div>
+
+      <hr>
+      <p>&copy; 2025 ESER - Energía Solar y Eficiencia Renovable. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

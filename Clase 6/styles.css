@@ -1,0 +1,229 @@
+/* 
+==========================
+🎨 Paleta de colores
+==========================
+- Verde energía: sostenibilidad
+- Amarillo solar: energía fotovoltaica
+- Azul limpio: innovación tecnológica
+- Gris oscuro: fondo neutro
+- Blanco humo: contraste y legibilidad
+*/
+:root {
+  --verde: #2ecc71;
+  --amarillo: #f1c40f;
+  --azul: #053b5f;
+  --gris-oscuro: #2c3e50;
+  --blanco: #ecf0f1;
+
+  /* Tipografía base */
+  --fuente-principal: "Tahoma", sans-serif;
+  --max-ancho: 1100px;
+}
+
+/* 
+==========================
+🔄 Reset básico
+==========================
+Eliminamos márgenes/paddings por defecto
+y aseguramos que box-sizing sea coherente.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+==========================
+🌍 Estilos globales
+==========================
+Definimos la tipografía, colores
+y un ancho máximo para mejorar la lectura.
+*/
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--gris-oscuro);
+  color: var(--blanco);
+  line-height: 1.6;
+}
+
+main {
+  max-width: var(--max-ancho);
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* 
+==========================
+🟢 Header & Nav
+==========================
+Creamos un encabezado fijo arriba
+con navegación moderna y responsiva.
+*/
+header {
+  background-color: var(--azul);
+  color: var(--blanco);
+  padding: 1rem 2rem;
+  position: sticky; /* se mantiene visible al hacer scroll */
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--amarillo);
+  outline: none;
+}
+
+/* 
+==========================
+📦 Secciones principales
+==========================
+Bloques con fondo alternado y bordes suaves
+para diferenciar áreas.
+*/
+section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #34495e; /* gris intermedio */
+}
+
+section h2,
+section h3,
+section h4 {
+  margin-bottom: 1rem;
+  color: var(--amarillo);
+}
+
+/* 
+==========================
+📑 Tablas
+==========================
+Diseño moderno y legible.
+*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+table th,
+table td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+
+table th {
+  background-color: var(--verde);
+  color: var(--gris-oscuro);
+}
+
+table tr:nth-child(even) {
+  background-color: #3b4b5c;
+}
+
+/* 
+==========================
+✍️ Formularios
+==========================
+Inputs y botones accesibles.
+*/
+form {
+  background-color: #3b4b5c;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #777;
+  background-color: #2c3e50;
+  color: var(--blanco);
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--amarillo);
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--verde);
+  border: none;
+  border-radius: 5px;
+  color: var(--gris-oscuro);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--amarillo);
+}
+
+/* 
+==========================
+🔻 Footer
+==========================
+Diseño consistente en todas las páginas.
+*/
+footer {
+  background-color: var(--azul);
+  color: var(--blanco);
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+footer div {
+  max-width: var(--max-ancho);
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer a {
+  color: var(--blanco);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--amarillo);
+}
+
+footer hr {
+  margin: 1.5rem 0;
+  border: none;
+  height: 1px;
+  background-color: #fff3;
+}
