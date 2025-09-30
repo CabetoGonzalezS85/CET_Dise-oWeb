@@ -1,0 +1,111 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo oscuro con degradado */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ecf0f1;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Contenedor general con Grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Tarjetas */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.8);
+}
+
+/* Títulos */
+.card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  color: #f1c40f;
+  text-shadow: 0 0 10px rgba(241,196,15,0.6);
+}
+
+.desc {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: #bdc3c7;
+}
+
+/* ==========================
+🔹 FLEXBOX
+========================== */
+.flex-container {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px dashed #3498db;
+  border-radius: 12px;
+  justify-content: space-around;
+  background: rgba(52,152,219,0.1);
+}
+
+.flex-item {
+  flex: 1;
+  min-width: 70px;
+  padding: 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.flex-item:hover {
+  transform: scale(1.05);
+}
+
+/* ==========================
+🔹 GRID
+========================== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px dashed #2ecc71;
+  border-radius: 12px;
+  background: rgba(46,204,113,0.1);
+}
+
+.grid-item {
+  padding: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.08);
+}

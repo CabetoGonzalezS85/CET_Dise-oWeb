@@ -2,31 +2,22 @@
 ==========================
 🎨 Paleta de colores
 ==========================
-- Verde energía: sostenibilidad
-- Amarillo solar: energía fotovoltaica
-- Azul limpio: innovación tecnológica
-- Gris oscuro: fondo neutro
-- Blanco humo: contraste y legibilidad
+Definimos variables reutilizables
+para mantener consistencia en el diseño.
 */
 :root {
-  --verde: #2ecc71;
-  --amarillo: #f1c40f;
-  --azul: #053b5f;
-  --gris-oscuro: #2c3e50;
-  --blanco: #ecf0f1;
+  --verde: #2ecc71;       /* sostenibilidad */
+  --amarillo: #f1c40f;    /* energía solar */
+  --azul: #053b5f;        /* innovación tecnológica */
+  --gris-oscuro: #2c3e50; /* fondo neutro */
+  --blanco: #ecf0f1;      /* contraste */
 
-  /* Tipografía base */
+  /* Tipografía y ancho máximo de contenido */
   --fuente-principal: "Tahoma", sans-serif;
   --max-ancho: 1100px;
 }
 
-/* 
-==========================
-🔄 Reset básico
-==========================
-Eliminamos márgenes/paddings por defecto
-y aseguramos que box-sizing sea coherente.
-*/
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -37,8 +28,8 @@ y aseguramos que box-sizing sea coherente.
 ==========================
 🌍 Estilos globales
 ==========================
-Definimos la tipografía, colores
-y un ancho máximo para mejorar la lectura.
+Aplicamos tipografía, colores base
+y mejoramos legibilidad.
 */
 body {
   font-family: var(--fuente-principal);
@@ -57,14 +48,14 @@ main {
 ==========================
 🟢 Header & Nav
 ==========================
-Creamos un encabezado fijo arriba
-con navegación moderna y responsiva.
+- Header fijo (sticky)
+- Menú con hover animado
 */
 header {
   background-color: var(--azul);
   color: var(--blanco);
   padding: 1rem 2rem;
-  position: sticky; /* se mantiene visible al hacer scroll */
+  position: sticky;
   top: 0;
   z-index: 1000;
 }
@@ -84,7 +75,7 @@ nav a {
   color: var(--blanco);
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s ease; /* transición suave */
 }
 
 nav a:hover,
@@ -97,14 +88,20 @@ nav a:focus {
 ==========================
 📦 Secciones principales
 ==========================
-Bloques con fondo alternado y bordes suaves
-para diferenciar áreas.
+Se diferencian con fondos
+y títulos en amarillo.
 */
 section {
   margin-bottom: 2rem;
   padding: 1.5rem;
   border-radius: 8px;
-  background-color: #34495e; /* gris intermedio */
+  background-color: #34495e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* como tarjeta */
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 section h2,
@@ -118,7 +115,7 @@ section h4 {
 ==========================
 📑 Tablas
 ==========================
-Diseño moderno y legible.
+Diseño claro con alternancia de filas.
 */
 table {
   width: 100%;
@@ -146,7 +143,7 @@ table tr:nth-child(even) {
 ==========================
 ✍️ Formularios
 ==========================
-Inputs y botones accesibles.
+Inputs con foco animado.
 */
 form {
   background-color: #3b4b5c;
@@ -168,11 +165,13 @@ textarea {
   border: 1px solid #777;
   background-color: #2c3e50;
   color: var(--blanco);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease; /* transición específica */
 }
 
 input:focus,
 textarea:focus {
-  outline: 2px solid var(--amarillo);
+  border-color: var(--amarillo);
+  box-shadow: 0 0 0 3px rgba(241, 196, 15, 0.3);
 }
 
 button {
@@ -184,7 +183,7 @@ button {
   color: var(--gris-oscuro);
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease; /* transición básica */
 }
 
 button:hover {
@@ -195,7 +194,7 @@ button:hover {
 ==========================
 🔻 Footer
 ==========================
-Diseño consistente en todas las páginas.
+Enlaces con hover animado.
 */
 footer {
   background-color: var(--azul);
@@ -214,7 +213,7 @@ footer a {
   color: var(--blanco);
   text-decoration: none;
   margin: 0 0.5rem;
-  transition: color 0.3s;
+  transition: color 0.3s ease; /* transición básica */
 }
 
 footer a:hover {

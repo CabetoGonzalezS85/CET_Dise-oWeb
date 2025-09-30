@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- Indica que este documento usa la versión HTML5 -->
+
+<html lang="es">
+<!-- Etiqueta raíz del documento, con idioma definido en español -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Define la codificación de caracteres como UTF-8 (permite acentos y caracteres especiales) -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Hace que el diseño sea responsivo, adaptándose al ancho de la pantalla del dispositivo -->
+
+  <title>Demo Siemens Layout</title>
+  <!-- Título de la pestaña del navegador -->
+
+  <link rel="stylesheet" href="styles5.css">
+  <!-- Enlaza la hoja de estilos externa llamada styles5.css -->
+</head>
+
+<body>
+  <!-- Cuerpo del documento, aquí va el contenido visible -->
+
+  <div class="layout">
+    <!-- Contenedor principal de toda la página (será un GRID general) -->
+
+    <!-- =================== -->
+    <!-- HEADER -->
+    <!-- =================== -->
+    <header>
+      <!-- Encabezado de la página -->
+
+      <div class="logo">🔷 Siemens UI</div>
+      <!-- Logo o nombre de la marca -->
+
+      <nav class="nav">
+        <!-- Menú de navegación principal -->
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Portafolio</a>
+        <a href="#">Blog</a>
+        <a href="#">Contacto</a>
+      </nav>
+    </header>
+
+    <!-- =================== -->
+    <!-- HERO -->
+    <!-- =================== -->
+    <section class="hero">
+      <!-- Sección principal de presentación (hero section) -->
+
+      <div class="hero-text">
+        <!-- Contenedor para el texto dentro del hero -->
+        <h1>Innovación con Siemens Colors</h1>
+        <!-- Título destacado -->
+        <p>Un diseño moderno aplicando CSS Grid y Flexbox con la paleta oficial de Siemens.</p>
+        <!-- Texto descriptivo -->
+        <button class="btn-hero">Explorar Más</button>
+        <!-- Botón de acción -->
+      </div>
+    </section>
+
+    <!-- =================== -->
+    <!-- SERVICIOS (Grid de 3 columnas) -->
+    <!-- =================== -->
+    <section class="services">
+      <!-- Sección de servicios -->
+      <h2>Nuestros Servicios</h2>
+      <!-- Título de sección -->
+
+      <div class="grid-3">
+        <!-- Contenedor con grid de 3 columnas -->
+        <div class="card">Consultoría</div>
+        <!-- Tarjeta 1 -->
+        <div class="card">Desarrollo</div>
+        <!-- Tarjeta 2 -->
+        <div class="card">Soporte</div>
+        <!-- Tarjeta 3 -->
+      </div>
+    </section>
+
+    <!-- =================== -->
+    <!-- PORTAFOLIO (Grid de 6 columnas) -->
+    <!-- =================== -->
+    <section class="portfolio">
+      <!-- Sección de portafolio -->
+      <h2>Portafolio</h2>
+      <!-- Título de sección -->
+
+      <div class="grid-6">
+        <!-- Contenedor con grid de 6 columnas -->
+        <div class="item">Proyecto 1</div>
+        <div class="item">Proyecto 2</div>
+        <div class="item">Proyecto 3</div>
+        <div class="item">Proyecto 4</div>
+        <div class="item">Proyecto 5</div>
+        <div class="item">Proyecto 6</div>
+      </div>
+    </section>
+
+    <!-- =================== -->
+    <!-- TESTIMONIOS (Flexbox) -->
+    <!-- =================== -->
+    <section class="testimonials">
+      <!-- Sección de testimonios -->
+      <h2>Testimonios</h2>
+      <!-- Título de sección -->
+
+      <div class="testimonial-container">
+        <!-- Contenedor flex para organizar testimonios -->
+        <div class="testimonial">“Excelente servicio.”</div>
+        <div class="testimonial">“Gran innovación.”</div>
+        <div class="testimonial">“Soporte 24/7 confiable.”</div>
+      </div>
+    </section>
+
+    <!-- =================== -->
+    <!-- BLOG (Grid de 4 columnas) -->
+    <!-- =================== -->
+    <section class="blog">
+      <!-- Sección del blog -->
+      <h2>Últimos Artículos</h2>
+      <!-- Título de sección -->
+
+      <div class="grid-4">
+        <!-- Contenedor con grid de 4 columnas -->
+        <article class="post">Post 1</article>
+        <article class="post">Post 2</article>
+        <article class="post">Post 3</article>
+        <article class="post">Post 4</article>
+      </div>
+    </section>
+
+    <!-- =================== -->
+    <!-- ASIDE -->
+    <!-- =================== -->
+    <aside class="aside">
+      <!-- Barra lateral -->
+      <h3>Enlaces Rápidos</h3>
+      <!-- Título del aside -->
+
+      <ul>
+        <!-- Lista de enlaces -->
+        <li><a href="#">Preguntas frecuentes</a></li>
+        <li><a href="#">Soporte técnico</a></li>
+        <li><a href="#">Políticas de privacidad</a></li>
+      </ul>
+    </aside>
+
+    <!-- =================== -->
+    <!-- FOOTER -->
+    <!-- =================== -->
+    <footer>
+      <!-- Pie de página -->
+      <p>© 2025 Siemens UI Demo. Todos los derechos reservados.</p>
+      <!-- Texto legal -->
+    </footer>
+
+  </div>
+  <!-- Fin del contenedor principal .layout -->
+</body>
+</html>

@@ -1,0 +1,251 @@
+/* Reset */
+* {
+  margin: 0;                 /* Quita todos los márgenes por defecto */
+  padding: 0;                /* Quita todos los rellenos por defecto */
+  box-sizing: border-box;    /* Hace que padding y border se incluyan en el tamaño total de los elementos */
+}
+
+/* ============================
+🎨 Paleta Siemens
+============================ */
+:root {
+  --siemens-petrol: rgb(0, 153, 153);   /* Color corporativo Siemens Petrol */
+  --deep-blue: rgb(0, 0, 40);           /* Azul profundo */
+  --soft-blue: rgb(0, 190, 220);        /* Azul suave */
+  --light-sand: rgb(243, 243, 240);     /* Arena clara (gris casi blanco) */
+  --white: rgb(255, 255, 255);          /* Blanco puro */
+
+  --bg-dark: rgb(24, 32, 44);           /* Color de fondo base oscuro */
+}
+
+/* ============================
+🌍 Global
+============================ */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif; /* Fuente general */
+  background: var(--bg-dark);                  /* Fondo oscuro */
+  color: var(--light-sand);                    /* Texto color arena claro */
+  display: grid;                               /* Usa Grid para organizar el body */
+  grid-template-rows: auto 1fr auto;           /* Header arriba, contenido en medio, footer abajo */
+  min-height: 100vh;                           /* Altura mínima: toda la ventana */
+}
+
+/* ============================
+HEADER
+============================ */
+header {
+  display: flex;                     /* Flexbox para alinear logo y menú */
+  justify-content: space-between;    /* Logo a la izquierda, menú a la derecha */
+  align-items: center;               /* Centrado vertical */
+  background: var(--deep-blue);      /* Fondo azul profundo */
+  padding: 1rem 2rem;                /* Espaciado interno */
+  color: var(--white);               /* Texto blanco */
+  position: sticky;                  /* Se queda fijo arriba al hacer scroll */
+  top: 0;                            /* Pegado arriba */
+  z-index: 1000;                     /* Encima de otros elementos */
+}
+
+.logo {
+  font-size: 1.5rem;                 /* Tamaño grande de fuente */
+  font-weight: bold;                 /* Texto en negrita */
+  color: var(--siemens-petrol);      /* Color corporativo Siemens Petrol */
+}
+
+.nav a {
+  margin-left: 1rem;                 /* Espacio entre enlaces */
+  color: var(--white);               /* Texto blanco */
+  text-decoration: none;             /* Sin subrayado */
+  padding: 0.5rem 1rem;              /* Espacio interno para hacerlo clickeable */
+  border-radius: 6px;                /* Esquinas redondeadas */
+  transition: background 0.3s;       /* Suaviza el cambio de fondo */
+}
+
+.nav a:hover {
+  background: var(--siemens-petrol); /* Fondo azul Siemens al pasar el mouse */
+}
+
+/* ============================
+HERO
+============================ */
+.hero {
+  background: linear-gradient(135deg, var(--deep-blue), var(--siemens-petrol)); /* Degradado azul a petrol */
+  color: var(--white);              /* Texto blanco */
+  text-align: center;               /* Centrado de texto */
+  padding: 4rem 2rem;               /* Relleno amplio para destacar */
+}
+
+.hero h1 {
+  font-size: 2rem;                  /* Tamaño grande de título */
+  margin-bottom: 1rem;              /* Espacio inferior */
+}
+
+.hero p {
+  margin-bottom: 1.5rem;            /* Espacio debajo del párrafo */
+}
+
+.btn-hero {
+  background: var(--soft-blue);     /* Fondo azul suave */
+  border: none;                     /* Sin borde */
+  padding: 0.8rem 1.5rem;           /* Tamaño del botón */
+  border-radius: 6px;               /* Esquinas redondeadas */
+  font-weight: bold;                /* Texto en negrita */
+  cursor: pointer;                  /* Cursor de mano al pasar encima */
+}
+
+.btn-hero:hover {
+  background: var(--siemens-petrol); /* Cambia a azul Siemens al pasar el mouse */
+}
+
+/* ============================
+SERVICIOS
+============================ */
+.services {
+  padding: 2rem;                     /* Espaciado interno */
+}
+
+.services h2 {
+  text-align: center;                /* Centrado del título */
+  margin-bottom: 1.5rem;             /* Espacio debajo del título */
+  color: var(--soft-blue);           /* Azul suave */
+}
+
+.grid-3 {
+  display: grid;                     /* Contenedor con Grid */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  gap: 1rem;                         /* Espacio entre columnas */
+}
+
+.card {
+  background: var(--deep-blue);      /* Fondo azul profundo */
+  padding: 2rem;                     /* Relleno interno */
+  border-radius: 10px;               /* Bordes redondeados */
+  text-align: center;                /* Texto centrado */
+  color: var(--white);               /* Texto blanco */
+}
+
+/* ============================
+PORTAFOLIO
+============================ */
+.portfolio {
+  padding: 2rem;                     /* Espaciado interno */
+  background: rgba(255, 255, 255, 0.05); /* Fondo semitransparente */
+}
+
+.portfolio h2 {
+  text-align: center;                /* Centrado */
+  margin-bottom: 1rem;               /* Espacio inferior */
+  color: var(--siemens-petrol);      /* Azul Siemens */
+}
+
+.grid-6 {
+  display: grid;                     /* Grid layout */
+  grid-template-columns: repeat(6, 1fr); /* 6 columnas iguales */
+  gap: 1rem;                         /* Espacio entre columnas */
+}
+
+.grid-6 .item {
+  background: var(--soft-blue);      /* Fondo azul suave */
+  padding: 1.5rem;                   /* Espaciado interno */
+  border-radius: 8px;                /* Bordes redondeados */
+  text-align: center;                /* Texto centrado */
+  font-weight: bold;                 /* Texto en negrita */
+  color: var(--deep-blue);           /* Texto azul profundo */
+}
+
+/* ============================
+TESTIMONIOS
+============================ */
+.testimonials {
+  padding: 2rem;                     /* Espaciado interno */
+  text-align: center;                /* Centrado del texto */
+}
+
+.testimonials h2 {
+  margin-bottom: 1.5rem;             /* Espacio debajo del título */
+  color: var(--soft-blue);           /* Azul suave */
+}
+
+.testimonial-container {
+  display: flex;                     /* Flexbox para organizar testimonios */
+  gap: 1rem;                         /* Espacio entre elementos */
+  justify-content: center;           /* Centrado horizontal */
+  flex-wrap: wrap;                   /* Permite que bajen a la siguiente línea si no caben */
+}
+
+.testimonial {
+  background: var(--deep-blue);      /* Fondo azul profundo */
+  color: var(--white);               /* Texto blanco */
+  padding: 1rem;                     /* Espaciado interno */
+  border-radius: 8px;                /* Bordes redondeados */
+  flex: 1;                           /* Se adaptan al espacio disponible */
+  min-width: 200px;                  /* Ancho mínimo */
+}
+
+/* ============================
+BLOG
+============================ */
+.blog {
+  padding: 2rem;                     /* Espaciado interno */
+  background: rgba(255, 255, 255, 0.05); /* Fondo semitransparente */
+}
+
+.blog h2 {
+  text-align: center;                /* Centrado del título */
+  margin-bottom: 1.5rem;             /* Espacio inferior */
+  color: var(--siemens-petrol);      /* Azul Siemens */
+}
+
+.grid-4 {
+  display: grid;                     /* Grid layout */
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+  gap: 1rem;                         /* Espacio entre columnas */
+}
+
+.post {
+  background: var(--soft-blue);      /* Fondo azul suave */
+  padding: 1.5rem;                   /* Espaciado interno */
+  border-radius: 8px;                /* Bordes redondeados */
+  text-align: center;                /* Texto centrado */
+  font-weight: bold;                 /* Texto en negrita */
+  color: var(--deep-blue);           /* Texto azul profundo */
+}
+
+/* ============================
+ASIDE
+============================ */
+.aside {
+  padding: 2rem;                     /* Espaciado interno */
+  background: var(--deep-blue);      /* Fondo azul profundo */
+  color: var(--white);               /* Texto blanco */
+}
+
+.aside h3 {
+  margin-bottom: 1rem;               /* Espacio debajo del título */
+}
+
+.aside ul {
+  list-style: none;                  /* Quita viñetas */
+}
+
+.aside li {
+  margin: 0.5rem 0;                  /* Espacio entre elementos */
+}
+
+.aside a {
+  color: var(--soft-blue);           /* Azul suave */
+  text-decoration: none;             /* Sin subrayado */
+}
+
+.aside a:hover {
+  color: var(--siemens-petrol);      /* Azul Siemens al pasar el mouse */
+}
+
+/* ============================
+FOOTER
+============================ */
+footer {
+  background: var(--deep-blue);      /* Fondo azul profundo */
+  color: var(--white);               /* Texto blanco */
+  padding: 1rem;                     /* Espaciado interno */
+  text-align: center;                /* Texto centrado */
+}
