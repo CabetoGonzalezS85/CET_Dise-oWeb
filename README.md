@@ -251,3 +251,111 @@ github.com/CabetoGonzalezS85
 
 ---
 
+
+## 🛠️ Flujo de trabajo con Git
+
+Este es un resumen del flujo de trabajo básico usando Git y GitHub, útil para proyectos personales o colaborativos. Se recomienda seguir estos pasos para mantener un historial de cambios limpio y ordenado.
+
+---
+
+### 1. Crear una nueva rama
+
+Antes de hacer cualquier cambio, crea una nueva rama para trabajar de forma aislada respecto a la rama principal (`main` o `master`):
+
+```bash
+git checkout -b nombre-de-la-rama
+```
+
+### 2. Hacer cambios en el proyecto
+
+Realiza las modificaciones necesarias en tu código, como crear o editar archivos (`index.html`, `styles.css`, `scripts.js`, etc.).
+
+### 3. Agregar los archivos modificados al área de preparación (staging)
+
+```bash
+git add .
+```
+
+Este comando agrega todos los archivos modificados o nuevos al "staging area", preparándolos para el commit.
+
+También puedes agregar archivos específicos:
+
+```bash
+git add ruta/al/archivo.html
+```
+
+### 4. Hacer un commit con mensaje descriptivo
+
+```bash
+git commit -m "Descripción clara del cambio realizado"
+```
+
+Un mensaje de commit debe ser corto, claro y directo. Ejemplo:
+
+```bash
+git commit -m "Agrega sección de contacto en index.html"
+```
+
+### 5. Subir la rama al repositorio remoto
+
+```bash
+git push origin nombre-de-la-rama
+```
+
+Esto sube tu rama y tus cambios al repositorio en GitHub.
+
+### 6. Crear un Pull Request (PR)
+
+Desde GitHub, verás una opción para comparar y crear un Pull Request.
+
+También puedes hacerlo desde la consola si tienes GitHub CLI (`gh`) instalado:
+
+```bash
+gh pr create --base main --head nombre-de-la-rama --title "Título del PR" --body "Descripción detallada de los cambios"
+```
+
+Ejemplo:
+
+```bash
+gh pr create --base main --head mejora-estilos --title "Mejora visual" --body "Actualiza styles.css con una paleta de colores más accesible."
+```
+
+### 7. Fusionar el Pull Request
+
+Después de que el PR ha sido revisado y aprobado, puedes fusionarlo:
+
+* Desde GitHub con el botón **"Merge pull request"**
+* O desde la terminal:
+
+```bash
+gh pr merge --delete-branch
+```
+
+Esto fusionará tu rama con `main` y eliminará la rama remota luego del merge.
+
+### 8. Eliminar la rama local
+
+Una vez hecho el merge, elimina la rama local para mantener el entorno limpio:
+
+```bash
+git branch -d nombre-de-la-rama
+```
+
+---
+
+### 🧐 Buenas prácticas adicionales
+
+* Mantén tus ramas pequeñas y vinculadas a una funcionalidad específica.
+
+* Escribe mensajes de commit descriptivos y coherentes.
+
+* Siempre actualiza tu rama `main` antes de partir para evitar conflictos:
+
+  ```bash
+  git checkout main
+  git pull origin main
+  ```
+
+* Evita trabajar directamente en `main`: siempre crea ramas de trabajo para tus cambios.
+
+---
