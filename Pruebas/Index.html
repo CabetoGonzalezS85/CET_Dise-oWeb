@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<!-- Indica que el documento usa HTML5 -->
+
+<html lang="es">
+<!-- Etiqueta raíz del documento, con idioma configurado en español -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Define la codificación de caracteres como UTF-8 (soporta acentos y caracteres especiales) -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ajusta la página a pantallas responsivas (especial para móviles) -->
+
+  <title>Demo Grid + Flexbox</title>
+  <!-- Título que aparece en la pestaña del navegador -->
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- Vincula el archivo externo de estilos CSS -->
+</head>
+
+<body>
+  <!-- Cuerpo del documento: aquí va todo lo visible en la página -->
+
+  <div class="layout">
+    <!-- Contenedor principal que será un GRID (estructura general de la página) -->
+
+    <!-- =================== -->
+    <!-- HEADER (encabezado) -->
+    <!-- =================== -->
+    <header>
+      <!-- Área de encabezado -->
+
+      <div class="logo">⚡ FlexGrid Demo</div>
+      <!-- Logo o nombre del sitio -->
+
+      <nav class="nav">
+        <!-- Menú de navegación (alineado con Flexbox) -->
+        <a href="#">Inicio</a>
+        <a href="#">Flexbox</a>
+        <a href="#">Grid</a>
+        <a href="#">Contacto</a>
+      </nav>
+    </header>
+
+    <!-- =================== -->
+    <!-- SIDEBAR (barra lateral) -->
+    <!-- =================== -->
+    <aside class="sidebar">
+      <!-- Barra lateral (colocada con Grid) -->
+
+      <h2>Menú Lateral</h2>
+      <!-- Título de la barra lateral -->
+
+      <ul>
+        <!-- Lista de enlaces -->
+        <li><a href="#">Ejemplo 1</a></li>
+        <li><a href="#">Ejemplo 2</a></li>
+        <li><a href="#">Ejemplo 3</a></li>
+      </ul>
+    </aside>
+
+    <!-- =================== -->
+    <!-- MAIN (contenido principal) -->
+    <!-- =================== -->
+    <main>
+      <!-- Sección principal del contenido -->
+
+      <h1>Bienvenido a la Demo</h1>
+      <!-- Título principal de la página -->
+
+      <p>
+        Aquí vemos cómo <strong>CSS Grid</strong> define la estructura de la página 
+        y <strong>Flexbox</strong> organiza los elementos dentro de cada área.
+      </p>
+      <!-- Párrafo explicativo con palabras resaltadas en negrita -->
+
+      <div class="card-container">
+        <!-- Contenedor que usa Flexbox para organizar las tarjetas -->
+
+        <div class="card">Tarjeta 1</div>
+        <!-- Tarjeta individual -->
+
+        <div class="card">Tarjeta 2</div>
+        <!-- Tarjeta individual -->
+
+        <div class="card">Tarjeta 3</div>
+        <!-- Tarjeta individual -->
+      </div>
+    </main>
+
+    <!-- =================== -->
+    <!-- FOOTER (pie de página) -->
+    <!-- =================== -->
+    <footer>
+      <!-- Pie de página -->
+
+      <p>© 2025 FlexGrid Demo. Todos los derechos reservados.</p>
+      <!-- Texto de derechos reservados -->
+    </footer>
+
+  </div>
+  <!-- Cierre del contenedor principal .layout -->
+</body>
+</html>

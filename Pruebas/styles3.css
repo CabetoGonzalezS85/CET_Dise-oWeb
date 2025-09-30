@@ -1,0 +1,191 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos globales */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: #ecf0f1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================================
+📐 Layout Principal
+================================= */
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* header - main - footer */
+  min-height: 100vh;
+}
+
+/* ================================
+🟢 HEADER
+================================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f39c12;
+  text-shadow: 0 0 8px rgba(243,156,18,0.8);
+}
+
+.nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #ecf0f1;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav a:hover {
+  background: linear-gradient(90deg, #8e44ad, #3498db);
+  box-shadow: 0 0 12px rgba(142,68,173,0.8);
+  color: #fff;
+}
+
+/* ================================
+🌟 Hero Section
+================================= */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  margin: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: #f1c40f;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 12px rgba(241,196,15,0.8);
+}
+
+.hero p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #bdc3c7;
+}
+
+.btn-hero {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #2ecc71, #27ae60);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-hero:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(46,204,113,0.8);
+}
+
+/* ================================
+📦 Grid de Tarjetas
+================================= */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+/* ================================
+📂 Layout de Dos Columnas
+================================= */
+.two-columns {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.sidebar {
+  background: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.sidebar h2 {
+  margin-bottom: 1rem;
+  color: #9b59b6;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 0.5rem 0;
+}
+
+.sidebar a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1c40f;
+}
+
+.content {
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* ================================
+🔻 FOOTER
+================================= */
+footer {
+  background: rgba(255,255,255,0.05);
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.4);
+  font-size: 0.9rem;
+  color: #bdc3c7;
+}
